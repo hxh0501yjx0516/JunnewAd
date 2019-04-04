@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="TaoXieForm" type="com.pancou.ad.form.TaoXieForm"></form-bean>
+    </form-beans>
+
+    <action-mappings>
+     	 <!-- 知我接口 -->
+	  	 <action path="/interface" type="com.pancou.ad.iter.InterfaceAction" parameter="action">
+	  		<forward name="get" path="/WEB-INF/jsp/interface/interface_get.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/interface/interface_list.jsp"></forward>
+	  		<forward name="proList" path="/WEB-INF/jsp/interface/interface_prolist.jsp"></forward>
+	  	 </action>
+	  	
+	  	 <!-- 渠道接口（知我） -->
+	  	 <action path="/mediaiter" type="com.pancou.ad.iter.MediaInterface" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/interface/mediaiter/mediaiter_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/interface/mediaiter/mediaiter_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/interface/mediaiter/mediaiter_edit.jsp"></forward>
+	  		<forward name="getCode" path="/WEB-INF/jsp/interface/mediaiter/getcode.jsp"></forward>
+	  	</action>
+	  	
+	  	<!-- 淘鞋接口 -->
+         <action path="/taoxie" type="com.pancou.ad.iter.TaoXieAction" parameter="action" name="TaoXieForm" attribute="TaoXieForm">
+            <forward name="get" path="/WEB-INF/jsp/interface/taoxie/get.jsp"></forward>
+            <forward name="list" path="/WEB-INF/jsp/interface/taoxie/list.jsp"></forward>
+         </action>
+         
+         <!-- 北青接口 -->
+         <action path="/beiqing" type="com.pancou.ad.iter.BeiqingAction" parameter="action">
+            <forward name="list" path="/WEB-INF/jsp/interface/beiqing/list.jsp"></forward>
+            <forward name="history" path="/WEB-INF/jsp/interface/beiqing/history.jsp"></forward>
+         </action>
+	</action-mappings>
+	
+
+</struts-config>
+

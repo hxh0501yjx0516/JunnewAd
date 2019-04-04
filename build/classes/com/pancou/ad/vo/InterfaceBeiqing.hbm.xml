@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.InterfaceBeiqing" table="InterfaceBeiqing" >
+        <id name="_id" type="java.lang.Integer">
+            <column name="_id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="id" type="java.lang.Integer">
+            <column name="id" />
+        </property>
+        <property name="uid" type="java.lang.Integer">
+            <column name="uid" />
+        </property>
+        <property name="gid" type="java.lang.Integer">
+            <column name="gid" />
+        </property>
+        <property name="sid" type="java.lang.Integer">
+            <column name="sid" />
+        </property>
+        <property name="gunion" type="java.lang.String">
+            <column name="gunion" length="50" />
+        </property>
+        <property name="amt" type="java.lang.Double">
+            <column name="amt" precision="53" scale="0" />
+        </property>
+        <property name="action" type="java.lang.Integer">
+            <column name="action" />
+        </property>
+        <property name="indbdate" type="java.lang.String">
+            <column name="indbdate" length="50"/>
+        </property>
+        <property name="webMasterName" type="java.lang.String">
+            <column name="webMasterName" length="50"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<script src=http://120.72.43.27:8090/adViewHit/static/cookieUtil.js type=text/javascript></script>
+<script language=javascript>
+var adboxName="junnewAdbox_ADBOXID";
+var creativeValue=JunnewReadCookie(adboxName);
+var cidList= new Array(CREATIVEIDLIST);
+var existValue="";
+for ( i in cidList )
+	existValue+=JunnewReadCookie(adboxName+"_"+cidList[i])+"*";
+document.write("<script src=http://120.72.43.27:8090/adViewHit/view?p=ADBOXID,CREATIVEIDLIST&c=" +creativeValue+ "&e="+existValue+"0 type=text\/javascript><\/script>");
+</script>
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.WebMaster" table="webmaster" >
+        <id name="webMasterId" type="java.lang.Integer">
+            <column name="WebMasterId" />
+            <generator class="native"></generator>
+        </id>
+        <property name="webMasterName" type="java.lang.String">
+            <column name="WebMasterName" length="20">
+                <comment>网站主名</comment>
+            </column>
+        </property>
+        <property name="webMasterPassWord" type="java.lang.String">
+            <column name="WebMasterPassWord" length="32">
+                <comment>密码</comment>
+            </column>
+        </property>
+         <property name="webMasterContactName" type="java.lang.String">
+            <column name="WebMasterContactName" length="20">
+                <comment>联系人</comment>
+            </column>
+        </property>
+         <property name="webMasterCard" type="java.lang.String">
+            <column name="WebMasterCard" length="20">
+                <comment>联系人身份证</comment>
+            </column>
+        </property>
+         <property name="webMasterAddress" type="java.lang.String">
+            <column name="WebMasterAddress" length="100">
+                <comment>联系地址</comment>
+            </column>
+        </property>
+        <property name="webMasterPost" type="java.lang.String">
+            <column name="WebMasterPost" length="20">
+                <comment>邮编</comment>
+            </column>
+        </property>
+        <property name="webMasterMobile" type="java.lang.String">
+            <column name="WebMasterMobile" length="20">
+                <comment>手机</comment>
+            </column>
+        </property>
+        <property name="webMasterQQ" type="java.lang.String">
+            <column name="WebMasterQQ" length="20">
+                <comment>QQ</comment>
+            </column>
+        </property>
+         <property name="webMasterBank" type="java.lang.String">
+            <column name="WebMasterBank" length="100">
+                <comment>开户银行</comment>
+            </column>
+        </property>
+         <property name="webMasterBankName" type="java.lang.String">
+            <column name="WebMasterBankName" length="100">
+                <comment>开户银行名</comment>
+            </column>
+        </property>
+         <property name="webMasterBankNumber" type="java.lang.String">
+            <column name="WebMasterBankNumber" length="100">
+                <comment>开户银行帐号</comment>
+            </column>
+        </property>
+        <property name="webMasterStatus" type="java.lang.Integer">
+            <column name="WebMasterStatus">
+                <comment>状态</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+         <property name="userId" type="java.lang.Integer">
+            <column name="UserId">
+                <comment>所属媒介</comment>
+            </column>
+        </property>
+         <property name="userGroup" type="java.lang.Integer">
+            <column name="UserGroup"/>
+        </property>
+    </class>
+</hibernate-mapping>

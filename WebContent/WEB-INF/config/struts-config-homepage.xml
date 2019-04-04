@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+ 	<form-beans >   
+		 <form-bean name="cmsForm" type="com.pancou.ad.form.CmsForm" />   
+	</form-beans>  
+    <action-mappings>
+    <!-- 客服管理 -->
+	  	 <action path="/service" type="com.pancou.ad.action.ServiceAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/homepage/service/service_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/homepage/service/service_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/homepage/service/service_list.jsp"></forward>
+	  	</action>
+	  	  <!-- 新闻管理 -->
+	  	 <action path="/cms" type="com.pancou.ad.action.CmsAction" parameter="action" name="cmsForm" attribute="cmsForm">
+	  		<forward name="add" path="/WEB-INF/jsp/homepage/cms/cms_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/homepage/cms/cms_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/homepage/cms/cms_list.jsp"></forward>
+	  	</action>
+	  	<!-- 新闻类别管理 -->
+	  	 <action path="/cmsclass" type="com.pancou.ad.action.CmsClassAction" parameter="action" >
+	  		<forward name="add" path="/WEB-INF/jsp/homepage/cms/cmsclass_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/homepage/cms/cmsclass_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/homepage/cms/cmsclass_list.jsp"></forward>
+	  	</action>
+	</action-mappings>
+</struts-config>
+

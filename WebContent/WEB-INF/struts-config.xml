@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+   <global-forwards>
+        <forward name="upload" path="/util/uploadajaxDone.jsp"></forward>
+     	<forward name="logout" path="/util/relogin.jsp"></forward>
+   		<forward name="ajaxDone" path="/util/ajaxDone.jsp"></forward>
+    </global-forwards>
+    <action-mappings>
+    <!-- 登录验证 -->
+	  	<action path="/login" type="com.pancou.ad.action.LoginAction" parameter="action">
+	  		<forward name="validate" path="/admin/index1.jsp"></forward>
+	  		<forward name="success" path="/WEB-INF/jsp/validate/validate.jsp"></forward>
+	  		<forward name="logout" path="/login.jsp"></forward>
+	  		<forward name="ok" path="/util/ajaxDone.html"></forward>
+	  		<forward name="uererr" path="/util/usererrDone.html"></forward>
+	  		<forward name="checkerr" path="/util/checkerrDone.html"></forward>
+	  		<forward name="userpwd" path="/util/userpwdDone.html"></forward>
+	  		
+	  	</action>
+	  	<action path="/logout" type="com.pancou.plat.action.LogoutAction" parameter="action">
+	  		<forward name="logout" path="/login.jsp" redirect="true"></forward>
+	  	</action>
+    
+	
+		
+		<!-- 用户模块 -->
+	  	<action path="/users" type="com.pancou.ad.action.UsersAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/users/users_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/users/users_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/users/users_edit.jsp"></forward>
+	  		<forward name="pwd" path="/WEB-INF/jsp/users/changepwd.jsp"></forward>
+	  		<forward name="editpwd" path="/WEB-INF/jsp/users/user_edit_pwd.jsp"></forward>
+	  		<forward name="ok" path="/WEB-INF/jsp/users/ajaxDone.html"></forward>
+	  		<forward name="ur" path="/WEB-INF/jsp/users/users_role.jsp"></forward>
+	  		
+	  	</action>
+	  	<!-- 角色模块 -->
+	  	<action path="/role" type="com.pancou.ad.action.RoleAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/role/role_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/role/role_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/role/role_edit.jsp"></forward>
+	  		<forward name="res" path="/WEB-INF/jsp/role/res_list.jsp"></forward>
+	  		<forward name="reslist" path="/WEB-INF/jsp/role/resource_list.jsp"></forward>
+	  		<forward name="ok" path="/WEB-INF/jsp/role/ajaxDone.html"></forward>
+	  	</action>
+	  	<!-- 资源模块 -->
+	  	<action path="/resource" type="com.pancou.ad.action.ResourceAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/resource/resource_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/resource/resource_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/resource/resource_edit.jsp"></forward>
+	  		<forward name="ok" path="/WEB-INF/jsp/resource/ajaxDone.html"></forward>
+	  	</action>
+	  	
+	  		<!-- 导数据模块 -->
+	  	<action path="/up" type="com.pancou.ad.action.UpLoadGetDataAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/upexcel/up_excel.jsp"></forward>
+	  		<forward name="ok" path="/WEB-INF/jsp/upexcel/ajaxDone.html"></forward>
+	  	</action>
+	  		<!-- 数据分析 -->
+	  	<action path="/dana" type="com.pancou.ad.action.DataAnalysis" parameter="action">
+	  		<forward name="main" path="/WEB-INF/jsp/analysis/data_main.jsp"></forward>
+	  		<forward name="pie" path="/WEB-INF/jsp/analysis/pie_detail.jsp"></forward>
+	  		<forward name="pied" path="/WEB-INF/jsp/analysis/pie_domain_detail.jsp"></forward>
+	  		<forward name="line" path="/WEB-INF/jsp/analysis/line_detail.jsp"></forward>
+	  		<forward name="all" path="/WEB-INF/jsp/analysis/all_detail.jsp"></forward>
+	  		<forward name="source" path="/WEB-INF/jsp/analysis/source_detail.jsp"></forward>
+	  		<forward name="ok" path="/WEB-INF/jsp/analysis/ajaxDone.html"></forward>
+	  	</action>
+	  			<!-- 计划周期联动模块 -->
+	  	<action path="/util" type="com.pancou.ad.action.UtilAction" parameter="action"></action>
+		<!-- 快照模块 -->
+	  	<action path="/snapshot" type="com.pancou.ad.action.SnapshotAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/snapshot/snapshot_list.jsp"></forward>
+	  	</action>
+	  	
+	  	<!-- AE流程文件管理上传 -->
+	  	<action path="/uploadify" type="com.pancou.ad.action.UploadifyAction" parameter="action" name="AdCreativeForm" attribute="AdCreativeForm">
+	  		<forward name="add" path="/WEB-INF/jsp/uploadify/uploadify_add.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/uploadify/uploadify_list.jsp"></forward>
+	  		<forward name="dir" path="/WEB-INF/jsp/uploadify/uploadify_dir.jsp"></forward>
+	  		<forward name="details" path="/WEB-INF/jsp/uploadify/uploadify_details.jsp"></forward>
+	  	</action>
+	  	<!--登陆ip限定 -->
+	  		<action path="/loginconfine" type="com.pancou.ad.action.LoginConfineAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/users/loginip/loginip_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/users/loginip/loginip_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/users/loginip/loginip_list.jsp"></forward>
+	  	</action>
+	  	<!-- 登陆日志 -->
+	  	<action path="/log" type="com.pancou.ad.action.LogAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/users/log_list.jsp"></forward>
+	  	</action>
+	  	<!-- 用户组 -->
+	  	<action path="/usergroup" type="com.pancou.ad.action.UserGroupAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/usergroup/usergroup_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/usergroup/usergroup_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/usergroup/usergroup_edit.jsp"></forward>
+	  	</action>
+	  	</action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

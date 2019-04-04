@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+    <action-mappings>
+    <!-- 客户管理 -->
+	  	 <action path="/customer" type="com.pancou.ad.action.CustomerAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/customer/customer_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/customer/customer_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/customer/customer_list.jsp"></forward>
+	  	</action>
+	</action-mappings>
+</struts-config>
+

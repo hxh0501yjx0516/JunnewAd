@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.Cms" table="CMS" >
+        <id name="cmsId" type="java.lang.Integer">
+            <column name="CMSId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="cmsClassId" type="java.lang.Integer">
+            <column name="CMSClassId" >
+                <comment>类别ID</comment>
+            </column>
+        </property>
+        <property name="cmsName" type="java.lang.String">
+            <column name="CMSName" length="100">
+                <comment>标题</comment>
+            </column>
+        </property>
+        <property name="cmsContent" type="java.lang.String">
+            <column name="CMSContent" >
+                <comment>内容</comment>
+            </column>
+        </property>
+         <property name="cmsImg" type="java.lang.String">
+            <column name="CMSImg" length="100">
+                <comment>图片</comment>
+            </column>
+        </property>
+        
+         <property name="cmsFlag" type="java.lang.Integer">
+            <column name="CMSFlag" >
+                <comment>标识</comment>
+            </column>
+        </property>
+         <property name="cmsStatus" type="java.lang.Integer">
+            <column name="CMSStatus" >
+                <comment>状态</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

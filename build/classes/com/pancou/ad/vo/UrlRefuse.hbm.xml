@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.UrlRefuse" table="UrlRefuse" >
+        <id name="urlId" type="java.lang.Integer">
+            <column name="UrlId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="urlName" type="java.lang.String">
+            <column name="UrlName" length="20" >
+                <comment>网站名称</comment>
+            </column>
+        </property>
+        <property name="url" type="java.lang.String">
+            <column name="url" length="100">
+                <comment>域名</comment>
+            </column>
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="userId" >
+                <comment>操作人ID</comment>
+            </column>
+        </property>
+         <property name="userName" type="java.lang.String">
+            <column name="UserName" length="50">
+                <comment>操作人</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

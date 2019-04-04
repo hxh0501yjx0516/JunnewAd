@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+    <action-mappings>
+    	<!-- 域名管理 -->
+	  	 <action path="/urladdress" type="com.pancou.ad.action.UrlAddressAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/urladdress/urladdress_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/urladdress/urladdress_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/urladdress/urladdress_list.jsp"></forward>
+	  		<forward name="refuseList" path="/WEB-INF/jsp/urladdress/urlrefuse_list.jsp"></forward>
+	  		<forward name="refuseAdd" path="/WEB-INF/jsp/urladdress/urlrefuse_add.jsp"></forward>
+	  		<forward name="refuseEdit" path="/WEB-INF/jsp/urladdress/urlrefuse_edit.jsp"></forward>
+	  	</action>
+	  	  <!-- 域名管理 -->
+	  	 <action path="/readybox" type="com.pancou.ad.action.ReadyBoxAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/readybox/getcode_list.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/readybox/getcode_edit.jsp"></forward>
+	  		<forward name="getcode" path="/WEB-INF/jsp/readybox/getcode.jsp"></forward>
+	  	</action>
+	</action-mappings>
+</struts-config>
+

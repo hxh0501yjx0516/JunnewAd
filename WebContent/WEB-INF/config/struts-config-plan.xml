@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<form-beans >   
+		 <form-bean name="AdCreativeForm" type="com.pancou.ad.form.AdCreativeForm" />   
+		  <form-bean name="AdPlanForm" type="com.pancou.ad.form.AdPlanForm" />   
+	</form-beans>  
+    <action-mappings>
+    <!-- 广告计划管理 -->
+	  	 <action path="/plan" type="com.pancou.ad.action.PlanAction" parameter="action" name="AdPlanForm" attribute="AdPlanForm">
+	  		<forward name="add" path="/WEB-INF/jsp/plan/plan_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/plan/plan_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/plan/plan_list.jsp"></forward>
+	  	</action>
+	  	 <!-- 广告计划与媒介关系管理 -->
+	  	 <action path="/readyplan" type="com.pancou.ad.action.ReadyPlanAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/plan/readyplan/readyplan_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/plan/readyplan/readyplan_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/plan/readyplan/readyplan_list.jsp"></forward>
+	  	</action>
+	  	 <!-- 广告创意管理 -->
+	  	 <action path="/adcreative" type="com.pancou.ad.action.AdCreativeAction" parameter="action" name="AdCreativeForm" attribute="AdCreativeForm">
+	  		<forward name="add" path="/WEB-INF/jsp/plan/adcreative/adcreative_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/plan/adcreative/adcreative_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/plan/adcreative/adcreative_list.jsp"></forward>
+	  	</action>
+	  	 <!-- 广告创意类型 -->
+	  	 <action path="/adcreativetype" type="com.pancou.ad.action.AdCreativeTypeAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/plan/adcreativetype/adcreativetype_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/plan/adcreativetype/adcreativetype_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/plan/adcreativetype/adcreativetype_edit.jsp"></forward>
+	  	</action>
+	  	 <!-- 广告周期管理 -->
+	  	 <action path="/plancycle" type="com.pancou.ad.action.PlancycleAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/plan/plancycle/plancycle_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/plan/plancycle/plancycle_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/plan/plancycle/plancycle_list.jsp"></forward>
+	  		<forward name="detail" path="/WEB-INF/jsp/plan/plancycle/plancycle_detail.jsp"></forward>
+	  	</action>
+	  	  <!-- 广告位管理 -->
+	  	<action path="/adboxinfo" type="com.pancou.ad.action.AdBoxInfoAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/adbox/standard/adboxinfo_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/adbox/standard/adboxinfo_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/adbox/standard/adboxinfo_list.jsp"></forward>
+	  	</action>
+	  		<action path="/adsize" type="com.pancou.ad.action.AdSizeAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/adbox/adsize/adsize_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/adbox/adsize/adsize_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/adbox/adsize/adsize_list.jsp"></forward>
+	  	</action>
+	  	<action path="/adbox" type="com.pancou.ad.action.AdBoxAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/adbox/adbox_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/adbox/adbox_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/adbox/adbox_list.jsp"></forward>
+	  		<forward name="defaultList" path="/WEB-INF/jsp/adbox/adbox_defaultlist.jsp"></forward>
+	  	</action>
+	  	<action path="/urlallow" type="com.pancou.ad.action.UrlAllowabledAction" parameter="action">
+	  		<forward name="add" path="/WEB-INF/jsp/plan/urlallow/urlallow_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/plan/urlallow/urlallow_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/plan/urlallow/urlallow_list.jsp"></forward>
+	  	</action>
+	</action-mappings>
+</struts-config>
+

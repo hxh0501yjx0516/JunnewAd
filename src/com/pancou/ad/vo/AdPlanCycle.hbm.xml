@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.AdPlanCycle" table="AdPlanCycle" >
+        <id name="adPlanCycleId" type="java.lang.Integer">
+            <column name="AdPlanCycleId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="adPlanId" type="java.lang.Integer">
+            <column name="AdPlanId" >
+                <comment>计划ID</comment>
+            </column>
+        </property>
+        <property name="adPlanCycleName" type="java.lang.String">
+            <column name="AdPlanCycleName" length="50">
+                <comment>计划周期名称</comment>
+            </column>
+        </property>
+          <property name="beginTime" type="java.lang.String">
+            <column name="BeginTime" >
+                <comment>周期开始时间</comment>
+            </column>
+        </property>
+         <property name="endTime" type="java.lang.String">
+            <column name="EndTime" >
+                <comment>周期结束时间</comment>
+            </column>
+        </property>
+         <property name="customerPrice" type="java.lang.Float">
+            <column name="CustomerPrice" >
+                <comment>客户单价</comment>
+            </column>
+        </property>
+        <property name="customerAllPrice" type="java.lang.Float">
+            <column name="CustomerAllPrice" >
+                <comment>预算</comment>
+            </column>
+        </property>
+        <property name="webMasterPrice" type="java.lang.Float">
+            <column name="WebMasterPrice" >
+                <comment>媒体最低单价</comment>
+            </column>
+        </property>
+          <property name="adPlanIsParameter" type="java.lang.Integer">
+            <column name="AdPlanIsParameter" >
+                <comment>是否传参</comment>
+            </column>
+        </property>
+          <property name="adPlanCycleStatus" type="java.lang.Integer">
+            <column name="AdPlanCycleStatus" >
+                <comment>状态</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" >
+                <comment>添加时间</comment>
+            </column>
+        </property>
+         <property name="adPlanCycleUrl" type="java.lang.String">
+            <column name="AdPlanCycleUrl" >
+                <comment>周期跳转路径</comment>
+            </column>
+        </property>
+         <property name="dateString" type="java.lang.String">
+            <column name="DateString" >
+                <comment>周期单日</comment>
+            </column>
+        </property>
+         <property name="dataString" type="java.lang.String">
+            <column name="DataString" >
+                <comment>周期单日流量</comment>
+            </column>
+        </property>
+         <property name="disCount" type="java.lang.Integer">
+            <column name="DisCount" >
+                <comment>扣量</comment>
+            </column>
+        </property>
+           <property name="showType" type="java.lang.Integer">
+            <column name="ShowType" >
+                <comment>显示类别1-UV,2-PV,3-IP</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

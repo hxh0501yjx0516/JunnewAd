@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.ReadyPlan" table="ReadyPlan" >
+        <id name="readyPlanId" type="java.lang.Integer">
+            <column name="ReadyPlanId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="adPlanId" type="java.lang.Integer">
+            <column name="AdPlanId" >
+                <comment>广告计划ID</comment>
+            </column>
+        </property>
+        <property name="adPlanName" type="java.lang.String">
+            <column name="AdPlanName" length="20">
+                <comment>计划名称</comment>
+            </column>
+        </property>
+         <property name="webMasterId" type="java.lang.Integer">
+            <column name="WebMasterId" length="20">
+                <comment>站长ID</comment>
+            </column>
+        </property>
+          <property name="webMasterName" type="java.lang.String">
+            <column name="WebMasterName" length="50">
+                <comment>站长名称</comment>
+            </column>
+        </property>
+        
+         <property name="readyPlanStatus" type="java.lang.Integer">
+            <column name="ReadyPlanStatus" >
+                <comment>状态</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" >
+                <comment>添加时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

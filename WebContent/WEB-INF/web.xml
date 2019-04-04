@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <filter>
+    <filter-name>Encoding Filter</filter-name>
+    <filter-class>com.pancou.ad.util.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Encoding Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>
+     /WEB-INF/config/struts-config-databalance.xml,
+      /WEB-INF/config/struts-config-homepage.xml,
+      /WEB-INF/config/struts-config-urladdress.xml,
+      /WEB-INF/config/struts-config-plan.xml,
+      /WEB-INF/config/struts-config-webmaster.xml,
+      /WEB-INF/config/struts-config-customer.xml,
+      /WEB-INF/config/struts-config-liujianping.xml,
+      /WEB-INF/config/struts-config-shop.xml,
+      /WEB-INF/config/struts-config-interface.xml,
+      /WEB-INF/struts-config.xml
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapshotServlet</servlet-name>
+    <servlet-class>com.pancou.ad.action.SnapshotServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SnapshotServlet</servlet-name>
+    <url-pattern>/servlet/SnapshotServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>initializeConfigure</servlet-name>
+    <servlet-class>
+            com.pancou.ad.util.InitializeConfigure
+        </servlet-class>
+    <load-on-startup>10</load-on-startup>
+  </servlet>
+  
+  <welcome-file-list>
+    <welcome-file>/login.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+    <session-timeout>300</session-timeout>
+  </session-config>
+  <error-page>
+    <exception-type>java.lang.NullPointerException</exception-type>
+    <location>/login.jsp</location>
+  </error-page>
+</web-app>

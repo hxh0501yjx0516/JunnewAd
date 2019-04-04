@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.CmsClass" table="CMSClass" >
+        <id name="cmsClassId" type="java.lang.Integer">
+            <column name="CMSClassId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="cmsClassName" type="java.lang.String">
+            <column name="CMSClassName" >
+                <comment>名称</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

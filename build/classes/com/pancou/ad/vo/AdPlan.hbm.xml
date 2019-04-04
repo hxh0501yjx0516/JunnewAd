@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.AdPlan" table="AdPlan" >
+        <id name="adPlanId" type="java.lang.Integer">
+            <column name="AdPlanId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="customerId" type="java.lang.Integer">
+            <column name="CustomerId" >
+                <comment>广告主ID</comment>
+            </column>
+        </property>
+        <property name="adPlanName" type="java.lang.String">
+            <column name="AdPlanName" length="50">
+                <comment>计划名称</comment>
+            </column>
+        </property>
+         <property name="adPlanStatus" type="java.lang.Integer">
+            <column name="AdPlanStatus" length="20">
+                <comment>计划状态</comment>
+            </column>
+        </property>
+         <property name="adPlanFlag" type="java.lang.Integer">
+            <column name="AdPlanFlag" length="20">
+                <comment>计划标识</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+         <property name="adPlanImg" type="java.lang.String">
+            <column name="AdPlanImg" length="100">
+                <comment>图片路径</comment>
+            </column>
+        </property>
+        <property name="userGroup" type="java.lang.Integer">
+            <column name="UserGroup">
+                <comment>用户组</comment>
+            </column>
+        </property>
+        <property name="adPlanRebate" type="java.lang.Integer">
+            <column name="AdPlanRebate" >
+                <comment>客户返点</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

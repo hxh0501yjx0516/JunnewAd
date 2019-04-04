@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+    <action-mappings>
+   		<!--广告模式-->
+	  	<action path="/admodel" type="com.pancou.ad.action.AdModelAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/admodel/admodel_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/admodel/admodel_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/admodel/admodel_edit.jsp"></forward>
+	  	</action>
+	  	
+    	<!-- 媒介管理 -->
+	  	<action path="/media" type="com.pancou.ad.action.MediaAction" parameter="action">
+	  		<forward name="editAction" path="/WEB-INF/jsp/media/media_edit.jsp"></forward>
+	  		<forward name="list" path="/WEB-INF/jsp/webmaster/webmaster_list.jsp"></forward>
+	  		<forward name="readyBoxList" path="/WEB-INF/jsp/media/readybox_list.jsp"></forward>
+	  		<forward name="reportCountList" path="/WEB-INF/jsp/media/reportcount_list.jsp"></forward>
+	  	</action>
+
+    	<!-- 数据执行 -->
+	  	<action path="/report" type="com.pancou.ad.action.ReportAction" parameter="action">
+	  		<forward name="adBoxCountList" path="/WEB-INF/jsp/report/report_list.jsp"></forward>
+	  		<forward name="verifyList" path="/WEB-INF/jsp/report/dataverify_list.jsp"></forward>
+	  		<forward name="dataReportList" path="/WEB-INF/jsp/report/datareport_list.jsp"></forward>
+	  	</action>
+
+	</action-mappings>
+</struts-config>
+

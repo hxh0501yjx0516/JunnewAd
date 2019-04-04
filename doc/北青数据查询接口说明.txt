@@ -1,0 +1,14 @@
+数据查询接口说明：
+查询地址
+http://sync.7676.com/cpsync/sync.php?dbid=xxx&btime=xxxx&etime=xxxxx&action=x
+
+参数：dbid合作方ID，贵方为087
+	btime:查询开始时间
+	etime：查询结束时间
+	action:结果类型	1注册	2充值
+其他说明：dbid不能为空，切为贵方ID，btime，etime也不能为空，不建议做较大时间段查询,action可为空，为空为充值和注册均有，如果 action为1那么amt值为0.00
+数据返回：json数据
+	数据说明:uid注册用户ID,gid游戏ID,sid游戏区服ID,gunion贵方的子站ID,amt金额,action同参数说明,indbdate数据入库时间
+
+
+另外，请贵方提供你方发起请求数据的IP地址

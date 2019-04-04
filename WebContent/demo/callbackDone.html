@@ -1,0 +1,15 @@
+<script type="text/javascript">
+	var statusCode="200";
+	var message="操作成功";
+	var navTabId="";
+	var forwardUrl=""; 
+	var callbackType="closeCurrent"
+
+	var response = {statusCode:statusCode,
+			message:message,
+			navTabId:navTabId,
+			forwardUrl:forwardUrl,
+			callbackType:callbackType
+		}
+	if(window.parent.donecallback) window.parent.donecallback(response);
+</script>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+<form-beans >   
+		  <form-bean name="ShopForm" type="com.pancou.ad.form.ShopForm" />   
+	</form-beans>  
+    <action-mappings>
+    <!-- 推广页设定 -->
+	  	 <action path="/shopindex" type="com.pancou.ad.action.ShopAction" parameter="action">
+	  		<forward name="editShopIndex" path="/WEB-INF/jsp/shop/shopindex_edit.jsp"></forward>
+	  	</action>
+	  	
+	<!-- 合作站点 -->
+	  	 <action path="/shopweb" type="com.pancou.ad.action.ShopWebAction" parameter="action">
+	  		<forward name="list" path="/WEB-INF/jsp/shop/shopweb_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/shop/shopweb_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/shop/shopweb_edit.jsp"></forward>
+	  	</action>
+	  	
+	<!-- 栏目管理 -->
+	  	 <action path="/shopclass" type="com.pancou.ad.action.ShopClassAction" parameter="action">
+	  		<forward name="fClassList" path="/WEB-INF/jsp/shop/fclass_list.jsp"></forward>
+	  		<forward name="fClassAdd" path="/WEB-INF/jsp/shop/fclass_add.jsp"></forward>
+	  		<forward name="fClassEdit" path="/WEB-INF/jsp/shop/fclass_edit.jsp"></forward>
+	  		
+	  		<forward name="sClassList" path="/WEB-INF/jsp/shop/sclass_list.jsp"></forward>
+	  		<forward name="sClassAdd" path="/WEB-INF/jsp/shop/sclass_add.jsp"></forward>
+	  		<forward name="sClassEdit" path="/WEB-INF/jsp/shop/sclass_edit.jsp"></forward>
+	  	</action>
+	  <!-- 内容管理 -->
+	  	 <action path="/shop" type="com.pancou.ad.action.ShopAction" parameter="action" name="ShopForm" attribute="ShopForm">
+	  		<forward name="list" path="/WEB-INF/jsp/shop/shop_list.jsp"></forward>
+	  		<forward name="add" path="/WEB-INF/jsp/shop/shop_add.jsp"></forward>
+	  		<forward name="edit" path="/WEB-INF/jsp/shop/shop_edit.jsp"></forward>
+	  		<forward name="view" path="/WEB-INF/jsp/shop/shop_view.jsp"></forward>
+	  		<forward name="getcode" path="/WEB-INF/jsp/shop/getcode.jsp"></forward>
+	  	</action>
+	  	
+	  <!-- 数据统计 -->
+	  	 <action path="/shopcount" type="com.pancou.ad.action.ShopCountAction" parameter="action">
+	  		<forward name="countList" path="/WEB-INF/jsp/shop/shopcount_list.jsp"></forward>
+	  		<forward name="sourceList" path="/WEB-INF/jsp/shop/shopsource_list.jsp"></forward>
+	  	</action>
+	  	
+	   <!-- 浮动层 -->
+	  	 <action path="/shopcss" type="com.pancou.ad.action.ShopCssAction" parameter="action">
+	  		<forward name="countList" path="/WEB-INF/jsp/shop/shopcss_list.jsp"></forward>
+	  	</action>
+	</action-mappings>
+</struts-config>
+

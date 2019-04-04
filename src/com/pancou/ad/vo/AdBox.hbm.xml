@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.AdBox" table="AdBox" >
+        <id name="adBoxId" type="java.lang.Integer">
+            <column name="AdBoxId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="adBoxInfoId" type="java.lang.Integer">
+            <column name="AdBoxInfoId" >
+                <comment>广告规格ID</comment>
+            </column>
+        </property>
+        <property name="adBoxName" type="java.lang.String">
+            <column name="AdBoxName" length="50">
+                <comment>广告位名称</comment>
+            </column>
+        </property>
+         <property name="webMasterId" type="java.lang.Integer">
+            <column name="WebMasterId" >
+                <comment>站长ID</comment>
+            </column>
+        </property>
+         <property name="urlId" type="java.lang.Integer">
+            <column name="UrlId" >
+                <comment>域名ID</comment>
+            </column>
+        </property>
+          <property name="adPlanId" type="java.lang.Integer">
+            <column name="AdPlanId" >
+                <comment>计划ID</comment>
+            </column>
+        </property>
+         <property name="adPlanCycleId" type="java.lang.Integer">
+            <column name="AdPlanCycleId" >
+                <comment>计划周期ID</comment>
+            </column>
+        </property>
+         <property name="adBoxStatus" type="java.lang.Integer">
+            <column name="AdBoxStatus" >
+                <comment>状态</comment>
+            </column>
+        </property>
+         <property name="adBoxFlag" type="java.lang.Integer">
+            <column name="AdBoxFlag" >
+                <comment>标识</comment>
+            </column>
+        </property>
+          <property name="isURLBand" type="java.lang.Integer">
+            <column name="IsURLBand" >
+                <comment>标识</comment>
+            </column>
+        </property>
+        
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pancou.ad.vo.UrlAddress" table="Url" >
+        <id name="urlId" type="java.lang.Integer">
+            <column name="UrlId" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="webMasterId" type="java.lang.Integer">
+            <column name="WebMasterId" >
+                <comment>网站主ID</comment>
+            </column>
+        </property>
+        <property name="webMasterName" type="java.lang.String">
+            <column name="WebMasterName" length="20">
+                <comment>网站主名称</comment>
+            </column>
+        </property>
+         <property name="urlName" type="java.lang.String">
+            <column name="UrlName" length="20">
+                <comment>网站名称</comment>
+            </column>
+        </property>
+           <property name="url" type="java.lang.String">
+            <column name="Url" length="100">
+                <comment>域名</comment>
+            </column>
+        </property>
+           <property name="urlICP" type="java.lang.String">
+            <column name="UrlICP" length="20">
+                <comment>IPC</comment>
+            </column>
+        </property>
+           <property name="urlDayIp" type="java.lang.String">
+            <column name="UrlDayIp" length="10">
+                <comment>日IP量</comment>
+            </column>
+        </property>
+        
+         <property name="urlAlexa" type="java.lang.Integer">
+            <column name="UrlAlax" length="20">
+                <comment>Alexa排名</comment>
+            </column>
+        </property>
+        
+        <property name="urlArea" type="java.lang.String">
+            <column name="UrlArea" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+        
+         <property name="urlTypeId" type="java.lang.Integer">
+            <column name="UrlTypeId" >
+                <comment>类型ID</comment>
+            </column>
+        </property>
+        
+        <property name="urlTypeName" type="java.lang.String">
+            <column name="UrlTypeName" length="20">
+                <comment>添加时间</comment>
+            </column>
+        </property>
+        
+         <property name="urlStatus" type="java.lang.Integer">
+            <column name="UrlStatus" >
+                <comment>状态</comment>
+            </column>
+        </property>
+        <property name="addTime" type="java.lang.String">
+            <column name="AddTime" >
+                <comment>添加时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
